@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요리 레시피 웹사이트</title>
     <link rel="stylesheet" href="/static/style.css">
-    <title>Node.js and HTML</title>
 </head>
 <body>
-    <h1>Hello, Node.js and HTML!</h1>
-    <p>Node.js 서버에서 제공하는 HTML 파일입니다.</p>
+    <!-- 네비게이션 바 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>맛있는 레시피</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#recipes">레시피</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 배너 -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>다양한 요리 레시피를 발견하세요</h2>
+            <p>맛있는 요리를 위한 최고의 레시피를 여기서 찾으세요!</p>
+            <a href="#recipes" class="btn">레시피 보기</a>
+        </div>
+    </section>
+
+    <!-- 추천 레시피 섹션 -->
+    <section id="recipes" class="featured-recipes">
+        <h2>추천 레시피</h2>
+        <div class="recipe-cards">
+            <div class="recipe-card">
+                <img src="recipe1.jpg" alt="레시피 1">
+                <h3>김치찌개</h3>
+                <p>한국의 전통적인 김치찌개 레시피</p>
+                <a href="#">자세히 보기</a>
+            </div>
+            <div class="recipe-card">
+                <img src="recipe2.jpg" alt="레시피 2">
+                <h3>비빔밥</h3>
+                <p>영양 만점 비빔밥 만들기</p>
+                <a href="#">자세히 보기</a>
+            </div>
+            <div class="recipe-card">
+                <img src="recipe3.jpg" alt="레시피 3">
+                <h3>떡볶이</h3>
+                <p>매콤한 떡볶이 레시피</p>
+                <a href="#">자세히 보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="about">
+        <h2>웹사이트 소개</h2>
+        <p>이 웹사이트는 전 세계의 다양한 요리 레시피를 모은 곳입니다. 여러분이 좋아하는 요리를 쉽게 찾고, 손쉽게 만들 수 있도록 돕겠습니다.</p>
+    </section>
+
+    <!-- 푸터 -->
+    <footer id="contact">
+        <p>&copy; 2024 맛있는 레시피. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>
