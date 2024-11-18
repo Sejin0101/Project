@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/shared.css">
+    <link rel="stylesheet" href="/static/recipe.css">
+    <title>레시피 목록</title>
+</head>
+
+<body>
+    <header>
+        <div id="page-logo">
+            <a href="/">MealLab</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="#">AI</a></li>
+                <li><a href="/recipe">레시피</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul>
+            <% recipes.forEach(recipe => { %>
+                <li>
+                    <img src="/static/images/recipe.png" alt="<%= recipe.name %>">
+                    <div class="inner-recipe-card">
+                        <h2><%= recipe.name %></h2>
+                        <p><%= recipe.description %></p>
+                        <div class="actions">
+                            <!-- 레시피 상세 페이지로 이동하는 링크 -->
+                            <a href="/recipe/<%= recipe.id %>" alt="<%= recipe.name %>">레시피 보기 &#x2192;</a>
+                        </div>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2024 맛있는 레시피. 모든 권리 보유.</p>
+    </footer>
+</body>
+
+</html>
