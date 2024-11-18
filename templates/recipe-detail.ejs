@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/shared.css">
+    <link rel="stylesheet" href="/static/recipe-detail.css">
+    <title><%= recipe.name %> 레시피</title>
+</head>
+
+<body>
+    <header>
+        <div id="page-logo">
+            <a href="/">MealLab</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="/templates/recipe">레시피</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="recipe-detail-container">
+        <div class="recipe-header">
+            <h1><%= recipe.name %></h1>
+            <p class="recipe-type">타입: <%= recipe.type %></p>
+        </div>
+
+        <section class="recipe-content">
+            <h2>재료</h2>
+            <ul class="ingredients-list">
+                <% recipe.ingredients.forEach(ingredient => { %>
+                    <li><%= ingredient %></li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section class="instructions">
+            <h2>조리 방법</h2>
+            <p><%= recipe.instructions %></p>
+        </section>
+
+        <div class="actions">
+            <a href="/templates/recipe" class="back-to-list">목록으로 돌아가기</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 맛있는 레시피. 모든 권리 보유.</p>
+    </footer>
+</body>
+
+</html>

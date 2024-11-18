@@ -1,131 +1,79 @@
-/* recipe-detail.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    position: static;
+    background-color: rgb(68, 68, 68);
 }
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin: 0 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.recipe-detail {
-    max-width: 1200px;
-    margin: 0 auto;
+/* 레시피 상세 페이지의 본문 영역 */
+.recipe-detail-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 80px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #f9f9f9;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.recipe-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
+/* 레시피 이름 */
 .recipe-header h1 {
     font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.recipe-header .recipe-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.recipe-info ul li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.recipe-method ol {
-    padding-left: 20px;
-}
-
-.recipe-method ol li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.recipe-video iframe {
-    max-width: 100%;
-    height: 315px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-share .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.recipe-share .social-links a {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.recipe-share .social-links a:hover {
-    background-color: #444;
-}
-
-.related-recipes ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-}
-
-.related-recipes ul li a {
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-}
-
-.related-recipes ul li a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #333;
-    color: white;
+    color: #2c3e50;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* 레시피 타입 */
+.recipe-type {
+    font-size: 18px;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 재료 제목 */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+/* 재료 목록 스타일 */
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients-list li {
+    font-size: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* 조리 방법 */
+.instructions p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #34495e;
+}
+
+/* '목록으로 돌아가기' 버튼 */
+.actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-to-list {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.back-to-list:hover {
+    background-color: #2980b9;
 }
